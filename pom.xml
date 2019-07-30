@@ -139,29 +139,36 @@
     </dependencies>
 
 	<repositories>
-   <repository>
-       <id>mulesoft-snapshots</id>
-       <name>MuleSoft Snapshots Repository</name>
-       <url>http://repository.mulesoft.org/snapshots/</url>
-       <layout>default</layout>
-   </repository>
-        <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>http://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>mulesoft-release</id>
-            <name>mulesoft release repository</name>
-            <layout>default</layout>
-            <url>http://repository.mulesoft.org/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+				<repository>
+					<id>mule-public</id>
+					<url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
+				</repository>
+				<repository>
+					<id>maven.oracle.com</id>
+					<name>oracle-maven-repo</name>
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>mule-public</id>
+					<url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
+				</pluginRepository>
+				<pluginRepository>
+					<id>maven.oracle.com</id>
+					<name>oracle-maven-repo</name> 
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
 
 </project>
