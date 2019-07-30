@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<settings>
+	<servers>
+		<server>
+			<id>MuleRepository</id>
+			<username>muletraining.nexus</username>
+			<password>MuleTraining</password>
+		</server>
+		<server>
+			<id>maven.oracle.com </id>
+			<username>firstname.lastname@test.com</username>
+			<password>{pnwmhVnzdM8H3UAneUKLmaHGZCoaprbMQ/Ac5UktvsM=}</password>
+			<configuration>
+				<basicAuthScope>
+					<host>ANY </host>
+					<port>ANY </port>
+					<realm>OAM 11g </realm>
+				</basicAuthScope>
+				<httpConfiguration>
+					<all>
+						<params>
+							<property>
+								<name>http.protocol.allow-circular-redirects </name>
+								<value>%b,true </value>
+							</property>
+						</params>
+					</all>
+				</httpConfiguration>
+			</configuration>
+		</server>
+	</servers>
+	<pluginGroups>
+		<pluginGroup>org.mule.tools</pluginGroup>
+	</pluginGroups>
+	<profiles>
+		<profile>
+			<id>mule-extra-repos</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>mule-public</id>
+					<url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
+				</repository>
+				<repository>
+					<id>maven.oracle.com</id>
+					<name>oracle-maven-repo</name>
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>mule-public</id>
+					<url> https://repository.mulesoft.org/nexus/content/repositories/public </url>
+				</pluginRepository>
+				<pluginRepository>
+					<id>maven.oracle.com</id>
+					<name>oracle-maven-repo</name> 
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+		<profile>
+			<id>Mule</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>MuleRepository</id>
+					<name>MuleRepository</name>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+</settings>
